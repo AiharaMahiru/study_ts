@@ -1,6 +1,26 @@
-let a: number;
-let b: number;
+let d: (a: number, b: number) => number;
 function sum(a: number, b: number){
     return a + b;
 }
-console.log(sum(10, 20));
+
+let e : Array<number>;
+e = [1, 2, 3];
+
+let h : [string, number];
+h = ['hello', 10];
+
+enum Anime{
+    name = "name",
+    time = "time",
+    isCompleted = "false"
+}
+
+let anime : {name: string, time: string, isCompleted: boolean};
+anime = {
+    name: 'naruto',
+    time: '2002',
+    isCompleted: Anime.isCompleted == "false" ? false : true
+}
+
+
+console.log(anime.isCompleted);
