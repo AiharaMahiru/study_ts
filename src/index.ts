@@ -1,4 +1,4 @@
-import {hi} from './lib';
+import {JSUT} from './lib';
 
 let d: (a: number, b: number) => number;
 function sum(a: number, b: number){
@@ -27,5 +27,5 @@ anime = {
 
 let box1 = document.getElementById('box1');
 box1?.addEventListener('click', function(e){
-    alert(hi);
+    alert(JSUT);
 });
