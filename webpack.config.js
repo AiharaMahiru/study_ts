@@ -19,6 +19,9 @@ module.exports = {
     },
     mode: 'development',
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            // title: 'Webpack 5 Typescript',
+            template: './src/index.html'
+        })
     ],
 }
