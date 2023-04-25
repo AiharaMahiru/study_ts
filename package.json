@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.1",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
