@@ -15,24 +15,24 @@ module.exports = {
             {
                 test: /\.ts$/,
                 use: [
-                    {
-                        loader: 'babel-loader',
-                        options: {
-                            presets: [
-                                [
-                                    '@babel/preset-env',
-                                    {
-                                        targets: {
-                                            chrome: '102',
-                                            ie: '11'
-                                        },
-                                        corejs: '3',
-                                        useBuiltIns: 'usage'
-                                    }
-                                ]
-                            ]
-                        }
-                    },
+                    // {
+                    //     loader: 'babel-loader',
+                    //     options: {
+                    //         presets: [
+                    //             [
+                    //                 '@babel/preset-env',
+                    //                 {
+                    //                     targets: {
+                    //                         chrome: '102',
+                    //                         ie: '11'
+                    //                     },
+                    //                     corejs: '3',
+                    //                     useBuiltIns: 'usage'
+                    //                 }
+                    //             ]
+                    //         ]
+                    //     }
+                    // },
                     'ts-loader', 
                 ],
                 exclude: /node_modules/
