@@ -1,5 +1,9 @@
 const path = require('path');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
     entry: './src/index.ts',
     output: {
@@ -15,5 +19,15 @@ module.exports = {
             }
         ]
     },
-    mode: 'development'
+    mode: 'development',
+    plugins: [
+        new HtmlWebpackPlugin({
+            // title: 'Webpack 5 Typescript',
+            template: './src/index.html'
+        }),
+        new CleanWebpackPlugin()
+    ],
+    resolve: {
+        extensions: ['.ts', '.js']
+    },
 }
