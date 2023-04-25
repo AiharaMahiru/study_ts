@@ -23,4 +23,7 @@ anime = {
 }
 
 
-console.log(anime.isCompleted);
+let box1 = document.getElementById('box1');
+box1?.addEventListener('click', function(e){
+    alert('hello');
+});
