@@ -27,7 +27,7 @@ module.exports = {
                                     '@babel/preset-env',
                                     {
                                         targets: {
-                                            chrome: '102',
+                                            chrome: '112',
                                             ie: '11'
                                         },
                                         corejs: '3',
@@ -54,7 +54,7 @@ module.exports = {
                                     [
                                         'postcss-preset-env',
                                         {
-                                            browsers: 'last 2 versions'
+                                            browsers: 'last 5 versions'
                                         }
                                     ]
                                 ]
