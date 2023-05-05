@@ -45,6 +45,7 @@ class Snake{
         if(value < 0 || value > 290){
             throw new Error('蛇撞墙了');
         }
+        //向左移动时，不能向右
         if(this.bodies[1] && (this.bodies[1] as HTMLElement).offsetLeft === value){
             if(value > this.X){
                 value = this.X - 10;
