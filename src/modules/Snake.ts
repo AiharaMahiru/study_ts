@@ -4,9 +4,9 @@ class Snake{
     element : HTMLElement;
 
     constructor(){
-        this.head = document.querySelector('#snake > div') as HTMLElement;
-        this.bodies = document.getElementById('snake')!.getElementsByTagName('div');
         this.element = document.getElementById('snake')!;
+        this.head = document.querySelector('#snake > div') as HTMLElement;
+        this.bodies = this.element.getElementsByTagName('div');
     }
     get X(){
         return this.head.offsetLeft;
@@ -21,8 +21,12 @@ class Snake{
         for(let i = this.bodies.length - 1; i > 0; i--){
             let X = (this.bodies[i - 1] as HTMLElement).offsetLeft;
             let Y = (this.bodies[i - 1] as HTMLElement).offsetTop;
+            console.log(X, Y);
+            
             (this.bodies[i] as HTMLElement).style.left = X + 'px';
             (this.bodies[i] as HTMLElement).style.top = Y + 'px';
+            console.log((this.bodies[i] as HTMLElement).style.left, (this.bodies[i] as HTMLElement).style.top);
+            
         }
     }
     checkHeadBody(){
@@ -33,6 +37,7 @@ class Snake{
             }
         }
     }
+
     set X(value){
         if(this.X === value){
             return;
